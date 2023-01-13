@@ -2,6 +2,5 @@
 
 CNU Software Academy 2기
 
-<br>
 
 2023. 01. 02 ~ 2023. 04. 28
