@@ -1,8 +1,3 @@
-# hi^^
-dksjakfdksaf
-good 
+git test file 입니다.
 
-
-good
-
-testddddd
+커밋 테스트 
