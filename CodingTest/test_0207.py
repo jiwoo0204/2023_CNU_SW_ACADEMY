@@ -1,12 +1,12 @@
 n = int(input())
 arr = list(map(int, input().strip().split(' ')))
 
-result = []
-count = 0
+arr.insert(0, 0)
+prefix = [0]
 
-for i in range(n):
-    count += arr[i]
-    result.append(count)
+for i in range(1, n + 1):
+    prefix.append(prefix[i - 1] + arr[i])
 
-for r in result:
-    print(r, end=' ')
+prefix.pop(0)
+
+print(*prefix)

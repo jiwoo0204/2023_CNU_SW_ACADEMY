@@ -1,15 +1,17 @@
 n = int(input())
 arr = list(map(int, input().strip().split(' ')))
 
-result = []  # 누적합 배열
-count = 0
+arr.insert(0, 0)
+prefix = [0]
 
-for i in range(n):
-    count += arr[i]
-    result.append(count)
+for i in range(1, n + 1):
+    prefix.append(prefix[i - 1] + arr[i])
 
-for i in range(len(result) - 1, 0, -1):
-    for j in range(i - 1, -1, -1):
-        result.append(result[i] - result[j])
+ret = -100
+for i in range(1, n + 1):
+    for j in range(i, n + 1):
+        sum = prefix[j] - prefix[i - 1]
+        ret = max(ret, sum)
 
-print(max(result))
+print(ret)
+
