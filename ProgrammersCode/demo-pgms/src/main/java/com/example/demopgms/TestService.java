@@ -12,4 +12,12 @@ public class TestService {
     public String test() {
         return tr.test();
     }
+
+    public String save(String value) {
+        return tr.save(value);
+    }
+
+    public String search(Long id) {
+        return tr.search(id);
+    }
 }
